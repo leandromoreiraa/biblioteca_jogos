@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block conteudo %}
+        <a href="{{ url_for('novo') }}" class="btn btn-success" role="button">Inserir Novo Jogo</a>
+
+        <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Console</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for jogo in jogos %}
+                <tr>
+                    <td>{{ jogo.nome }}</td>
+                    <td>{{ jogo.categoria }}</td>
+                    <td>{{ jogo.console }}</td>
+                    <td><a href="{{ url_for('editar', id=jogo.id) }}">Editar</a></td>
+                    <td><a href="{{ url_for('deletar', id=jogo.id) }}">Deletar</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+            <a href="{{ url_for('logout') }}" class="btn btn-danger" role="button">Sair</a>
+            <a href="{{ url_for('login') }}" class="btn btn-warning" role="button">Login</a>
+{% endblock %}
