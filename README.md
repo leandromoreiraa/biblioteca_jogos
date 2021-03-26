@@ -1,4 +1,4 @@
-Biblioteca de Jogos
+# Biblioteca de Jogos
 
 Esse é meu primeiro projeto utilizando a linguagem Python no Back-End, criando um CRUD utilizando o Framework Flask; importando o MySql para criação do Banco de Dados; Utilizando CSS, Bootstrap e HTML para realizar o Front-End;
 
